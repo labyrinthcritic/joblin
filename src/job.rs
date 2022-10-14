@@ -2,7 +2,7 @@ use std::{fs::File, path::PathBuf};
 
 use serde::{Deserialize, Serialize};
 
-const JOBS_DIR: &str = ".config/jot/jobs";
+const JOBS_DIR: &str = ".config/joblin/jobs";
 
 #[derive(Debug)]
 pub struct JobConfiguration {
