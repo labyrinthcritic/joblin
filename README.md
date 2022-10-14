@@ -16,16 +16,15 @@ job:
 This job will be executed once each day at midnight:
 
 ```yaml
----
 job:
-	time:
-		minute:
-			- 0
-		hour:
-			- 0
-	commands:
-		- /home/kiwi/bin/hello_world.sh
-		- /home/kiwi/bin/do_something.sh
+  time:
+    minute:
+      - 0
+    hour:
+      - 0
+    commands:
+      - /home/kiwi/bin/hello_world.sh
+      - /home/kiwi/bin/do_something.sh
 ```
 
 Keys in `time` can be `minute`, `hour`, `day`, `month`, or `weekday`.
