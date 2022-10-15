@@ -3,8 +3,6 @@ mod job;
 mod subcommands;
 mod time;
 
-use std::process::Command;
-
 use chrono::Timelike;
 use clap::Parser;
 
