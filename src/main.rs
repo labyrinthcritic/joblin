@@ -49,6 +49,7 @@ fn check_and_execute(jobs: &Jobs) {
 fn execute_job(job_file: &JobFile) {
     for command in job_file.job.commands.iter() {
         // ignore if the command fails
-        let _ = Command::new(command).spawn();
+        // `execute::shell` will run a full shell command from a string
+        let _ = execute::shell(command).spawn();
     }
 }
