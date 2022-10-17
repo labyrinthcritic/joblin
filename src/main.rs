@@ -1,4 +1,5 @@
 mod args;
+mod check_running;
 mod job;
 mod subcommands;
 mod time;
@@ -13,6 +14,8 @@ fn main() {
     let args = Args::parse();
 
     let jobs = Jobs::read(args.jobs_dir.clone());
+
+    check_running::check_running();
 
     if let Some(subcommand) = args.subcommand {
         match subcommand {

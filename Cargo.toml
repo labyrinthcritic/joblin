@@ -14,3 +14,4 @@ dirs = "4.0.0"
 execute = "0.2.11"
 serde = { version = "1.0.145", features = ["derive"] }
 serde_yaml = "0.9.13"
+sysinfo = "0.26.4"
