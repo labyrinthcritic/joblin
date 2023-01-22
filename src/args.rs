@@ -15,5 +15,6 @@ pub struct Args {
 
 #[derive(Debug, clap::Subcommand)]
 pub enum Subcommand {
+    /// Show jobs found in the jobs directory
     Check,
 }
