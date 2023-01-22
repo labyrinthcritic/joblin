@@ -8,7 +8,7 @@ pub struct Args {
     #[command(subcommand)]
     pub subcommand: Option<Subcommand>,
 
-    /// Directory containing job files (default is ~/.config/jot/jobs)
+    /// Directory containing job files (default is ~/.config/joblin/jobs)
     #[arg(long)]
     pub jobs_dir: Option<PathBuf>,
 }
