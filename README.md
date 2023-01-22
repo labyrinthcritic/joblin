@@ -4,7 +4,9 @@ joblin can be run as a background process and execute commands based on individu
 
 By default, jobs are searched for in `~/.config/joblin/jobs`.
 
-Example job (executed once each minute):
+## Examples
+
+A job with no time constraints will execute each minute.
 
 ```yaml
 ---
@@ -16,6 +18,7 @@ job:
 This job will be executed once each day at midnight:
 
 ```yaml
+---
 job:
   time:
     minute:
