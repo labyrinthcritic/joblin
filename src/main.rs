@@ -15,13 +15,12 @@ fn main() {
 
     let jobs = Jobs::read(args.jobs_dir.clone());
 
-    check_running::check_running();
-
     if let Some(subcommand) = args.subcommand {
         match subcommand {
             Subcommand::Check => subcommands::check::check(&jobs),
         }
     } else {
+        check_running::check_running();
         jobs_loop(&jobs);
     }
 }
@@ -32,7 +31,7 @@ fn jobs_loop(jobs: &Jobs) {
         // wait until the next minute change
 
         let second = chrono::offset::Local::now().time().second();
-        std::thread::sleep(std::time::Duration::from_secs(60 - second as u64));
+        std::thread::sleep(std::time::Duration::from_secs(61 - second as u64));
 
         check_and_execute(jobs);
     }
